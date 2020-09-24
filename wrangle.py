@@ -7,5 +7,4 @@ def wrangle_telco():
     df = acquire.telco_two_year_charges()
     df['total_charges'] = pd.to_numeric(df['total_charges'],errors='coerce')
     df.dropna(inplace = True) 
-    df['outlier_tenure'] = df['tenure'] < 13.5
     return df
